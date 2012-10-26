@@ -5,10 +5,10 @@
   <div class="span6 offset3">
     <%= form_tag sessions_path, methods=> :post do %>
 
-      <%= label_tag :email %>
-      <%= text_field_tag :email, params[:email], placeholder=> "Email" %>
+      <%= label_tag 'email' %>
+      <%= text_field_tag :email, params[:email] %>
 
-      <%= label_tag :password %>
+      <%= label_tag 'password' %>
       <%= password_field_tag :password %>
 
       <%= submit_tag "Sign in", class: "btn btn-large btn-primary" %>
