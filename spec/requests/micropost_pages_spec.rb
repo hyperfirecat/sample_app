@@ -29,6 +29,25 @@ describe "Micropost pages" do
         expect { click_button "Post" }.to change(Micropost, :count).by(1)
       end
     end
+
+		# Exercise 10 number 1
+		describe "valid singular sidebar micropost count" do
+			before { fill_in 'micropost_content', with: "Testing This" }
+			it "should update count singular" do
+				click_button "Post"
+				page.should have_selector("span", text: "1 micropost")
+			end
+		end
+		describe "valid plural sidebar micropost count" do			
+			before { fill_in 'micropost_content', with: "Testing That" }
+			it "should update count plural" do
+				click_button "Post"
+				fill_in 'micropost_content', with: "Testing That"
+				click_button "Post"
+				page.should have_selector("span", text: "2 microposts")
+			end
+		end
+
   end
   
   describe "micropost destruction" do
