@@ -20,7 +20,7 @@ describe "Micropost pages" do
         before { click_button "Post" }
         it { should have_content('error') } 
       end
-    end
+    end # invalid info end
 
     describe "with valid information" do
 
@@ -28,9 +28,9 @@ describe "Micropost pages" do
       it "should create a micropost" do
         expect { click_button "Post" }.to change(Micropost, :count).by(1)
       end
-    end
+    end # valid info end
 
-		# Exercise 10 number 1
+		# Chapter 10 Exercise 1
 		describe "valid singular sidebar micropost count" do
 			before { fill_in 'micropost_content', with: "Testing This" }
 			it "should update count singular" do
@@ -48,7 +48,17 @@ describe "Micropost pages" do
 			end
 		end
 
-  end
+		# Chapter 10 Exercise 2
+		#describe "microposts valid pagination" do
+			#for i in 0..31
+			#	fill_in 'micropost_content', with: "test content"
+			#	click_button "Post"
+			#end
+			#page.should have_selector("li.next_page.next", text: "Next")
+			#page.should_not have_selector("li.disabled.next_page.next", text: "Next")
+		#end
+
+  end # micropost creation end
   
   describe "micropost destruction" do
     before { FactoryGirl.create(:micropost, user: user) }

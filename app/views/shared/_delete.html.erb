@@ -1,0 +1,9 @@
+<span class="content"><%= @deleteType.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(@deleteType.created_at) %> ago.
+  </span>
+  <% if current_user?(@deleteType.user) %>
+    <%= link_to "delete", @deleteType, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: @deleteType.content %>
+  <% end %>
