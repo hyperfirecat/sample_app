@@ -50,9 +50,10 @@ describe "Micropost pages" do
 
 		# Chapter 10 Exercise 2
 		#describe "microposts valid pagination" do
-			#for i in 0..31
-			#	fill_in 'micropost_content', with: "test content"
-			#	click_button "Post"
+		#	before { visit root_path }
+			#for i in 0..31 do
+				#fill_in 'micropost_content', with: "test content"
+				#click_button "Post"
 			#end
 			#page.should have_selector("li.next_page.next", text: "Next")
 			#page.should_not have_selector("li.disabled.next_page.next", text: "Next")
