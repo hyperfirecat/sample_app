@@ -3,9 +3,12 @@ This is the sample application for
 [*Ruby on Rails Tutorial: LEarn Rails by Example*](http://railstutorial.org/)
 by [Michale Hartl](http://miachelhartl.com/).
 
+# I THINK I am finally done with this crazy tutorial.
+#
+#
 # Yay tutorial.  Stupid computers.  Stupid interactions between programs.  
 # Driving me nuts.  
-# Too many things that don't work without much effort beyond installing.
+# Too many things that do not work without much effort beyond installing.
 
 == Description of Contents
 
